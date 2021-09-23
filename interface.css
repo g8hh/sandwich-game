@@ -1,0 +1,160 @@
+*  {
+    font-size: 110%;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+   }
+html,body {
+    overflow-x: hidden;
+    padding:1%;
+   }
+   body{    overflow-y: hidden;}
+div.rightSideFixed {
+    float: right;
+    right: 40%;
+    position: fixed;
+}
+p{
+    font-size: 80%; 
+}
+.row {
+    display: flex;
+}
+.column {
+    border-style: double;
+    padding: 7px;
+    flex: 50%;
+    transition: opacity ease 3s;
+}
+@media (max-width:1000px){
+    
+}
+.button {
+    outline: none;
+    padding: 10px 15px;
+    font-size: 70%;
+    border: solid rgb(189, 189, 189);
+    background-color: rgb(189, 189, 189);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.scaryButton {
+    padding: 5px;
+    font-size: 25px;
+    color: white;
+    background: radial-gradient(circle, rgb(66, 0, 0) 17%, rgb(141, 0, 0) 50%, rgb(65, 0, 0) 83%);
+    background-size: 600% 600%;
+    border:inset rgb(42, 42, 42);
+    border-width: 6px;
+    margin:auto;
+    position: relative;
+    animation: altarBg 15s ease infinite;
+    --wekbit-animation: altarBg 15s ease infinite;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(189, 189, 189);
+}
+.button:active {
+    border: solid rgb(189, 189, 189);
+    background-color:darkgray;
+}
+button:disabled {
+    cursor: not-allowed;
+    opacity: 60%;
+}
+.bottomScreen {
+    bottom: 1px;
+    position: fixed;
+}
+#sname {
+    font-size:30px;
+    padding: 14px 28px;
+}
+.rainbow-text {
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, rgb(133, 133, 0), orange, red, violet);
+    background-size: 800% 800%;
+    background-clip:unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 10s ease infinite;
+  }
+  @keyframes rainbow { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
+.invisible {
+    opacity:0;  
+    height: 0;
+    width: 0;
+}
+.visible {
+    opacity:1;
+    height: auto;
+    width: auto;
+}
+table {
+    font-size: 20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+    border: 1px double black;
+    text-align: left;
+    padding: 8px;
+  }
+
+  /*tr:nth-child(even) {
+    background-color: #9c9c9c;
+  }*/
+  select {
+      font-size: 30px;
+  }
+  .noborder, .noborder tr, .noborder th, .noborder td { border: none; }
+  .altar {
+    background: radial-gradient(circle, rgba(98,0,0,1) 17%, rgb(255, 0, 0) 50%, rgba(98,0,0,1) 83%);
+    background-size: 400% 400%;
+    border:inset rgb(42, 42, 42);
+    border-width: 6px;
+    border-radius:100px;
+    width:175px;
+    height:70px;
+    padding:70px;
+    margin:auto;
+    box-shadow: -2px -2px 20px 15px rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    position: relative;
+    animation: altarBg 6s ease infinite;
+    --wekbit-animation: altarBg 6s ease infinite;
+  }
+@keyframes altarBg {
+    0%{background-position:15% 15%}
+    25%{background-position:75% 20%}
+    50%{background-position:85% 85%}
+    75%{background-position:20% 75%}
+    100%{background-position:15% 15%}
+}
+  #altarSelect {
+    text-align-last:center;
+    left:7%;
+    color:white;
+    border:none;
+    background:rgba(0, 0, 0, 0);
+    position:absolute;
+    top: 50%;
+    margin-top:-10%;
+    outline:0px;
+  }
+  option {
+      color: black;
+      background-color: white;
+      border-radius:100px;
+  }
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
